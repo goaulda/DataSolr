@@ -12,11 +12,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "item")
 @SolrDocument(solrCoreName = "item")
 public class Item {
 
