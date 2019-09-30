@@ -4,23 +4,25 @@ package com.test.project.solr.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.NaturalId;
+import org.hibernate.annotations.Generated;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
-import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import java.io.Serializable;
 
 @Getter
 @Setter
 @NoArgsConstructor
-@SolrDocument(solrCoreName = "item")
-public class Item {
+@SolrDocument(collection = "data")
+public class Item implements Serializable {
 
     @Id
-    @Indexed(name = "id", type = "Long")
-    Long id;
+   // @GeneratedValue(strategy = GenerationType.AUTO)
+    @Indexed(name = "id", type = "String")
+    String id;
 
     @Indexed(name = "nameItem", type = "string")
     String nameItem;

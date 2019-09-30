@@ -12,9 +12,9 @@ import org.springframework.data.solr.repository.config.EnableSolrRepositories;
 
 import javax.annotation.Resource;
 
-@Configuration
-@EnableSolrRepositories(basePackages = {"com.test.project.solr.repo"})
-@ComponentScan
+//@Configuration
+//@EnableSolrRepositories(basePackages = {"com.test.project.solr.repo"})
+//@ComponentScan
 public class SolrCofing {
 
     @ComponentScan
